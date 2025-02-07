@@ -23,6 +23,7 @@ SDL_Window* initSDL(){
         return 1;
     }
 }
+// them comment 
 int main(){
     SDL_Window* window=initSDL();
     SDL_Renderer* renderer=createRenderer();
