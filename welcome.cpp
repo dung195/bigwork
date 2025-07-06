@@ -33,12 +33,19 @@ void renderClickableText(SDL_Renderer* renderer, const std::string& message, int
     SDL_RenderCopy(renderer, textTexture, nullptr, &dstRect);
 
     SDL_Event e;
+    int mx, my;
+    SDL_GetMouseState(&mx, &my);
+    if (isPointInRect(mx, my, dstRect)) {
+        SDL_SetCursor(SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_HAND));
+    } else {
+        SDL_SetCursor(SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_ARROW));
+    }
     while (SDL_PollEvent(&e)) {
         if (e.type == SDL_MOUSEBUTTONDOWN) {
             int mx = e.button.x, my = e.button.y;
             if (isPointInRect(mx, my, dstRect)) {
                 clicked = true;
-                cout<<123<<endl;
+                cout << 123 << endl;
             }
         }
     }
