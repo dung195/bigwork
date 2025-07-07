@@ -45,11 +45,11 @@ void renderClickableText(SDL_Renderer* renderer, const std::string& message, int
             int mx = e.button.x, my = e.button.y;
             if (isPointInRect(mx, my, dstRect)) {
                 clicked = true;
-                cout << 123 << endl;
+                return;
             }
         }
     }
-
+    cout<<123<<endl;
     SDL_DestroyTexture(textTexture);
     SDL_FreeSurface(textSurface);
 }

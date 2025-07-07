@@ -59,6 +59,21 @@ int main(int argc, char* argv[]) {
         bool clicked= false;
         renderClickableText(renderer, u8"Chơi", 900, 300, Font, color, clicked);
         SDL_RenderPresent(renderer);
+        // play
+        while (clicked && !quit)
+        {
+            while (SDL_PollEvent(&e)) {
+                if (e.type == SDL_QUIT) {
+                    quit = true;
+                }
+            }
+            SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+            SDL_RenderClear(renderer);
+            SDL_RenderPresent(renderer);
+            
+            /* code */
+        }
+        
     }
 
     // Cleanup
