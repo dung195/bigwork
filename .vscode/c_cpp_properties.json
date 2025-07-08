@@ -3,7 +3,9 @@
     {
       "name": "linux-gcc-x64",
       "includePath": [
-        "${workspaceFolder}/**"
+        "${workspaceFolder}/**",
+        "/usr/include/SDL2",
+        "/usr/local/include/SDL2"
       ],
       "compilerPath": "/usr/bin/gcc",
       "cStandard": "${default}",

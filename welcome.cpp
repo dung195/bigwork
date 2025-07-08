@@ -49,7 +49,7 @@ void renderClickableText(SDL_Renderer* renderer, const std::string& message, int
             }
         }
     }
-    cout<<123<<endl;
+    //cout<<123<<endl;
     SDL_DestroyTexture(textTexture);
     SDL_FreeSurface(textSurface);
 }

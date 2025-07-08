@@ -36,8 +36,13 @@
   "C_Cpp_Runner.enableWarnings": true,
   "C_Cpp_Runner.warningsAsError": false,
   "C_Cpp_Runner.compilerArgs": [],
-  "C_Cpp_Runner.linkerArgs": [],
-  "C_Cpp_Runner.includePaths": [],
+  "C_Cpp_Runner.linkerArgs": [
+    "-lSDL2",
+    "-lSDL2_ttf"
+  ],
+  "C_Cpp_Runner.includePaths": [
+    "/usr/include/SDL2"
+  ],
   "C_Cpp_Runner.includeSearch": [
     "*",
     "**/*"

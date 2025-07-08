@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Debug with SDL2",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-std=c++17",
+        "${workspaceFolder}/*.cpp",
+        "-I/usr/include/SDL2",
+        "-lSDL2",
+        "-lSDL2_ttf",
+        "-o",
+        "${workspaceFolder}/build/Debug/outDebug"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Build task for SDL2 project with debug symbols"
+    },
+    {
+      "label": "Create Debug Directory",
+      "type": "shell",
+      "command": "mkdir",
+      "args": ["-p", "${workspaceFolder}/build/Debug"],
+      "group": "build",
+      "presentation": {
+        "echo": false,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared"
+      }
+    }
+  ]
+}
